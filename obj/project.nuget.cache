@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "1wHZDzX+JECgNMlQRLKfmuTgikSoPDVZYdFCuqn0IAY3SieMoX+fsmRZ5shRroS9FitpMDuX5B1YGaFHNR8dHA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mikhail\\RiderProjects\\mathematicalOptimization\\mathematicalOptimization.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mikhail\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.16\\microsoft.netcore.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\mikhail\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.16\\microsoft.windowsdesktop.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\mikhail\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.16\\microsoft.aspnetcore.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\mikhail\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.16\\microsoft.netcore.app.host.win-x64.7.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
