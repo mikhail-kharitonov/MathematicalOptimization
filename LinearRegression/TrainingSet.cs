@@ -16,7 +16,7 @@ public class TrainingSet
     }
     
     /// <summary>
-    /// Создание набора данных с небольшим шумом около прямой y = _k * x + _b
+    /// Создание набора данных с шумом около прямой y = _k * x + _b
     /// </summary>
     /// <returns></returns>
     public Point[] CreateTestData()

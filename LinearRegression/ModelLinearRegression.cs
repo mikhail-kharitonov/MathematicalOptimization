@@ -10,24 +10,23 @@ public class ModelLinearRegression
     {
         _trainingSet = trainingSet;
     }
-    
 
-    public double CalcLossFunction(double[] w)
+
+    private double CalcLossFunction(double[] w)
     {
         int amount = _trainingSet.Length;
-        double l = 0;
-        foreach (var point in _trainingSet)
+        double lossFunction = 0;
+        foreach (Point point in _trainingSet)
         {
-            l = l + (w[1] * point.X + w[0] - point.Y) * (w[1] * point.X + w[0] - point.Y);
+            lossFunction = lossFunction + (w[1] * point.X + w[0] - point.Y) * (w[1] * point.X + w[0] - point.Y);
         }
 
-        return l / amount;
+        return lossFunction / amount;
     }
 
     public double[] GetOptParams()
     {
         double[] xStart = new[] { 1.0, 1.0 };
-        var x = GradientDescent.FindLocalMin(CalcLossFunction, xStart).XOpt;
-        return x;
+        return GradientDescent.FindLocalMin(CalcLossFunction, xStart).XOpt;
     }
 }

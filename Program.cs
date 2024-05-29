@@ -9,34 +9,22 @@ public static class Program
 {
     public static void Main()
     {
-        
-        //GradientDescent gradientDescent = new GradientDescent();
-        double[] xStart = new[] { 1.0, 1.0 };
-        var res = GradientDescent.FindLocalMin(GoalFunc, xStart);
-        
-        foreach (double d in res.XOpt)
-        {
-            Console.WriteLine($"{d}");
-        }
-        
         //Линейная регрессия
-        TrainingSet trainingSet = new TrainingSet(5, 7, 175);
-        var trDta = trainingSet.CreateTestData();
-
-        ModelLinearRegression linearRegression = new ModelLinearRegression(trDta);
-        var w = linearRegression.GetOptParams();
+        double w0 = 5;
+        double w1 = 7;
+        Console.WriteLine($"Начальные параметры: w_0 = {w0}, w_1 = {w1}");
         
-        foreach (double d in w)
-        {
-            Console.WriteLine($"{d}");
-        }
+        TrainingSet trainingSet = new TrainingSet(w0, w1, 100);
+        Point[] data = trainingSet.CreateTestData();
+
+        ModelLinearRegression linearRegression = new ModelLinearRegression(data);
+        double[] w = linearRegression.GetOptParams();
+        
+        Console.WriteLine($"Оптимальные параметры: w_0 = {w[0]}, w_1 = {w[1]}");
+        
 
 
     }
-
-    public static double GoalFunc(double[] x)
-    {
-        return x[0] * x[0] + x[1] * x[1];
-    }
+    
     
 }
