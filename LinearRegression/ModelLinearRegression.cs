@@ -18,9 +18,8 @@ public class ModelLinearRegression
         double lossFunction = 0;
         foreach (Point point in _trainingSet)
         {
-            lossFunction = lossFunction + (w[1] * point.X + w[0] - point.Y) * (w[1] * point.X + w[0] - point.Y);
+            lossFunction += (w[1] * point.X + w[0] - point.Y) * (w[1] * point.X + w[0] - point.Y);
         }
-
         return lossFunction / amount;
     }
 
